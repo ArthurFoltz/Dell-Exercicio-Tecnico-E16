@@ -195,8 +195,24 @@ public class Medications {
         this.comercializacao2020 = comercializacao2020;
         this.tarja = tarja;
     }
+
+
+    @Override
+    public String toString() {
+        return "Medications [analiseRecursal=" + analiseRecursal + ", apresentacao=" + apresentacao + ", cap=" + cap
+                + ", classeTerapeutica=" + classeTerapeutica + ", cnpj=" + cnpj + ", codigoGgrem=" + codigoGgrem
+                + ", comercializacao2020=" + comercializacao2020 + ", confaz87=" + confaz87 + ", ean1=" + ean1
+                + ", ean2=" + ean2 + ", ean3=" + ean3 + ", icms0=" + icms0 + ", laboratorio=" + laboratorio
+                + ", listaConcessaoCreditoTributario=" + listaConcessaoCreditoTributario + ", pfSemImposto="
+                + pfSemImposto + ", pmcZero=" + pmcZero + ", produto=" + produto + ", regimePreco=" + regimePreco
+                + ", registro=" + registro + ", restricaoHospitalar=" + restricaoHospitalar + ", substancia="
+                + substancia + ", tarja=" + tarja + ", tipoProduto=" + tipoProduto + "]";
+    }
     
-    
+    public String returnMedicineBasicInfo(){
+        String basicInformation = getSubstancia() + "" + getProduto() + "" + getApresentacao() + getPfSemImposto() + " ";
+        return basicInformation;
+    }
 
 
     

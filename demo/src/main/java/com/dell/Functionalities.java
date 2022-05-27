@@ -9,13 +9,17 @@ public class Functionalities {
     
     ReadCsv read = new ReadCsv();
 
-    public ArrayList<Medications> searchMedicationName(String name){
+    public ArrayList<String> searchMedicationName(String name){
 
-        ArrayList<Medications> matchNameList = new ArrayList<>();
+        ArrayList<String> matchNameList = new ArrayList<>();
+		String match = null;
 
         for (int i = 0; i < read.returnMedicationList().size(); i++) {
 			if (read.returnMedicationList().get(i).getSubstancia().equals(name) || read.returnMedicationList().get(i).getSubstancia().contains(name)) { // verifica se o nome é igual ou se contem parte do mesmo
-                matchNameList.add(read.returnMedicationList().get(i));
+				if(read.returnMedicationList().get(i).getComercializacao2020().equals("Sim")){
+					match = read.returnMedicationList().get(i).returnMedicineBasicInfo();
+					matchNameList.add(match);		   
+				}
 			}
 		}
         return matchNameList;
