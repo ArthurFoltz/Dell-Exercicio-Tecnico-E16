@@ -1,6 +1,6 @@
 package com.dell;
 
-public class Medications {
+public class Medications implements Comparable<Medications>{
     
     private String substancia;
     private String cnpj;
@@ -358,6 +358,14 @@ public class Medications {
     }
 
    
-
+    public int compareTo(Medications anotherMedications) {
+		if (Double.parseDouble(this.pmc0) < Double.parseDouble(anotherMedications.pmc0)) {
+			return -1;
+		}
+		if (Double.parseDouble(this.pmc0) > Double.parseDouble(anotherMedications.pmc0)) {
+			return 1;
+		}
+		return 0;
+	}
     
 }
