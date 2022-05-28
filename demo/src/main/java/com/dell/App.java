@@ -1,9 +1,9 @@
 package com.dell;
 
-import java.io.File;
+import java.io.IOException;
 
 public class App {
-    public static void main(String[] args){
+    public static void main(String[] args) throws IllegalStateException, IOException{
         
         Functionalities start = new Functionalities();
         start.execute();

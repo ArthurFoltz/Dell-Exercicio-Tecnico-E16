@@ -1,6 +1,8 @@
 package com.dell;
 
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -9,7 +11,7 @@ public class Functionalities {
     
     ReadCsv read = new ReadCsv();
 
-    public ArrayList<String> searchMedicationName(String name){
+    /*public ArrayList<String> searchMedicationName(String name){
 
         ArrayList<String> matchNameList = new ArrayList<>();
 		String match = null;
@@ -23,10 +25,10 @@ public class Functionalities {
 			}
 		}
         return matchNameList;
-    }
+    }*/
 
 
-    public void execute() {
+    public void execute() throws IllegalStateException, IOException {
 
 
 		int chose2 = 0;

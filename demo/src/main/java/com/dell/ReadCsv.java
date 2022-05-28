@@ -18,7 +18,7 @@ public class ReadCsv {
 			try(BufferedReader br = Files.newBufferedReader(pathToFile,StandardCharsets.ISO_8859_1)){
 				String row = br.readLine();
 				while(row!=null) {
-					String [] atributos = row.split(";");
+					String [] atributos = row.split(";(?=([^\"]|\"[^\"]*\")*$)");
 					Medications medicine = getMedicine(atributos);
 					medicationsList.add(medicine);
 					row = br.readLine();
@@ -68,4 +68,6 @@ public class ReadCsv {
     public ArrayList<Medications> returnMedicationList(){
         return medicationsList;
     }
-}
+
+ }
+
