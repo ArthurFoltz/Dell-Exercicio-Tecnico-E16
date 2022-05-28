@@ -100,12 +100,12 @@ public class Functionalities {
 			neutralStars = star + neutralStars;
 		}
 
-		BigDecimal n = new BigDecimal(negativePercentage).setScale(2, RoundingMode.HALF_UP);
-		BigDecimal p = new BigDecimal(neutralPercentage).setScale(2, RoundingMode.HALF_UP);
-		BigDecimal neu = new BigDecimal(positivePercentage).setScale(2, RoundingMode.HALF_UP);
-      	String negativePercentage2 = n.toString();
-		String neutralPercentage2 = neu.toString();
-		String positivePercentage2 = p.toString();
+		BigDecimal negat = new BigDecimal(negativePercentage).setScale(2, RoundingMode.HALF_UP);
+		BigDecimal neutr = new BigDecimal(neutralPercentage).setScale(2, RoundingMode.HALF_UP);
+		BigDecimal positi = new BigDecimal(positivePercentage).setScale(2, RoundingMode.HALF_UP);
+      	String negativePercentage2 = negat.toString();
+		String neutralPercentage2 = neutr.toString();
+		String positivePercentage2 = positi.toString();
 
 		String[][] retorno = {
 							{"CLASSIFICACAO", "PERCENTUAL", "GRAFICO"}, 
