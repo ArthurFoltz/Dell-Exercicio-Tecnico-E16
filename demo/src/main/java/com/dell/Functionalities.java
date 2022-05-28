@@ -11,7 +11,7 @@ public class Functionalities {
     
     ReadCsv read = new ReadCsv();
 
-    /*public ArrayList<String> searchMedicationName(String name){
+    public ArrayList<String> searchMedicationName(String name){
 
         ArrayList<String> matchNameList = new ArrayList<>();
 		String match = null;
@@ -25,7 +25,20 @@ public class Functionalities {
 			}
 		}
         return matchNameList;
-    }*/
+    }
+
+	public ArrayList<Medications> searBarcode(int barcode){
+
+		ArrayList<Medications> matchBarcode = new ArrayList<>();
+
+		for (int i = 0; i < read.returnMedicationList().size(); i++) {
+			if (read.returnMedicationList().get(i).getEan1().equals(Integer.toString(barcode)) || read.returnMedicationList().get(i).getEan2().equals(Integer.toString(barcode)) || read.returnMedicationList().get(i).getEan3().equals(Integer.toString(barcode))){
+				matchBarcode.add(read.returnMedicationList().get(i));
+			}
+		}
+		
+		return matchBarcode;
+	}
 
 
     public void execute() throws IllegalStateException, IOException {
@@ -55,28 +68,17 @@ public class Functionalities {
 					System.out.println("Sucesso ! ");
 					break;
 					
-			case 2: try{
-						System.out.println("Digite o ano ");
-						int anoConsulta = in.nextInt();
-						//if(consultaAno(anoConsulta) == null) {
-							System.out.println("Nenhum bolsista encontrado no ano escolhido");
-						//}else System.out.println(consultaAno(anoConsulta));
-						break;
-			} catch (InputMismatchException entradaInvalidaNumero) {
-					System.err.println("Não é permitido inserir letras, informe apenas números inteiros!");
-					in.nextLine(); //descarta a entrada
-					break;
-				}
-					
-			case 3: System.out.println("Digite o nome ");
+			case 2: System.out.println("Por favor, digite o nome do medicamento");
+					System.out.println("Please, type the medication name");
 					String nome1 = in.nextLine();
 					String nome = in.nextLine();
-					//System.out.println(consultaNome(nome.toUpperCase()));
+					System.out.println(searchMedicationName(nome.toUpperCase()));
 					break;
 					
-			case 4: try{
-						System.out.println("Digite o ano ");
-						int anoMedia = in.nextInt();
+			case 3: try{
+						System.out.println("Por favor, digite o codigo de barras ");
+						System.out.println("Please, type the barcode ");
+						int barcode = in.nextInt();
 						//System.out.println(consultaMediaValoresAnual(anoMedia));
 						break;
 				} catch (InputMismatchException entradaInvalidaNumero) {
@@ -85,10 +87,10 @@ public class Functionalities {
 					break;
 				}
 				
-			case 5: //System.out.println(consultaValoresBolsa());
+			case 4: //System.out.println(consultaValoresBolsa());
 					break;
 			
-			case 6: System.out.println("Programa finalizado !");
+			case 5: System.out.println("Programa finalizado !");
 					chose2 = 6;
 					break;
 			}
