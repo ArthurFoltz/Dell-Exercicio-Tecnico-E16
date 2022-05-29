@@ -1,9 +1,11 @@
 package com.dell;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -13,7 +15,7 @@ public class ReadCsv {
     
     private ArrayList<Medications> medicationsList = new ArrayList<>();
 
-    public ArrayList<Medications> ProcessCsv(String path){
+    public boolean ProcessCsv(String path) throws NoSuchFileException, FileNotFoundException{
 
         int cont = 0;
         Path pathToFile = Paths.get(path);
@@ -27,13 +29,16 @@ public class ReadCsv {
                     cont++;
                     System.out.println(cont);
 				}
-			} catch (IOException e) {
-				e.printStackTrace();
+			} catch (IOException FileNotFound) {
+				System.err.println("Arquivo nao encontrado");
+				System.err.println("File not found");
 			}
 		
+		if(medicationsList.isEmpty()){
+            return false;
+        }
 		
-		
-		return medicationsList;
+		return true;
         
     }
 
