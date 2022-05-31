@@ -1,6 +1,5 @@
 package com.dell;
 
-
 import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -8,11 +7,24 @@ import java.nio.file.NoSuchFileException;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Esta classe realiza as funcoes requeridas pelo exercicio tecnico dell edicao 16
+ * This class realizes the functions required by the 16th dell technical exam
+ * @author Arthur Mariano Foltz Barroso
+ * @version 1.0
+ */
 
 public class Functionalities {
     
     ReadCsv read = new ReadCsv();
 
+	/** 
+	 * Procura na lista um ou mais medicamentos pelo nome(ou parte dele) especificado pelo usuario
+	 * Search for medications with the same name(or part of it) especified by the user
+	 * @see ReadCsv
+	 * @param name para o nome do medicamento / for the medication name
+	 * @return uma lista com os medicamentos encontrados / a list with the found medications
+	*/
     public ArrayList<String> searchMedicationName(String name){
 
         ArrayList<String> matchNameList = new ArrayList<>();
