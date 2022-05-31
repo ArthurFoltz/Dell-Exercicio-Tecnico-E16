@@ -5,8 +5,8 @@ import java.io.IOException;
 public class App {
     public static void main(String[] args) throws IllegalStateException, IOException{
         
-        Functionalities start = new Functionalities();
-        start.execute();
+        Execute start = new Execute();
+        start.executeApp();
     }
 
   
