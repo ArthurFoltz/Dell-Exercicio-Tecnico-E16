@@ -189,9 +189,9 @@ public class Functionalities {
 	 * @throws NoSuchFileException
 	 * @throws FileNotFoundException
 	 */
-	public boolean csvToBeRead(String pathToFile) throws NoSuchFileException, FileNotFoundException{
+	public boolean csvToBeRead() throws NoSuchFileException, FileNotFoundException{
 		boolean readOrNot;
-		readOrNot = read.ProcessCsv(pathToFile);
+		readOrNot = read.ProcessCsv();
 		return readOrNot;
 	}
 

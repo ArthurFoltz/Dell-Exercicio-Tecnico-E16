@@ -28,10 +28,10 @@ public class ReadCsv {
      * @throws NoSuchFileException Caso nao exista tal arquivo / If the file does not exist
      * @throws FileNotFoundException Caso nao encontre tal arquivo / If the file was not found
      */
-    public boolean ProcessCsv(String path) throws NoSuchFileException, FileNotFoundException{
+    public boolean ProcessCsv() throws NoSuchFileException, FileNotFoundException{
 
         int cont = 0;
-        Path pathToFile = Paths.get(path);
+        Path pathToFile = Paths.get("TA_PRECO_MEDICAMENTO.csv");
 			try(BufferedReader br = Files.newBufferedReader(pathToFile,StandardCharsets.ISO_8859_1)){
 				String row = br.readLine();
 				while(row!=null) {

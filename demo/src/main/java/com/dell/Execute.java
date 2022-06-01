@@ -22,7 +22,7 @@ public class Execute {
 		while(chose2 != 5) {
 			Scanner in = new Scanner(System.in);
 			System.out.println("");
-			System.out.println("Digitar 1, digite o caminho do arquivo CSV / Write the CSV file path"); 
+			System.out.println("Digitar 1, inicializar arquivo CSV / Initialize CSV file"); 
 			System.out.println("Digitar 2, consultar medicamento pelo nome / search for medication name");
 			System.out.println("Digitar 3, buscar pelo codigo de barras / search for medication barcode "); 
 			System.out.println("Digitar 4, comparativo da lista de concessao de credito tributario / tax concession comparative list"); 
@@ -33,12 +33,8 @@ public class Execute {
 		
 			switch(chose) {
 			case 1: 
-					System.out.println("Digite o caminho do arquivo CSV / Write the CSV file path:");
-					System.out.println("For example / por exemplo: ");
-					System.out.println("C:\\Users\\Arthur\\Desktop\\lista\\listabolsas.csv ");
-					in.nextLine();
-					String caminho = in.nextLine();
-					if(grabAppFunctions.csvToBeRead(caminho)){
+					System.out.println("Recebendo dados / Receiving data:");
+					if(grabAppFunctions.csvToBeRead()){
 						System.out.println("Sucesso ! / Success");
 					}
 					else System.out.println("Erro ! / Error");
