@@ -9,6 +9,14 @@ public class Execute {
 
     Functionalities grabAppFunctions = new Functionalities();
     
+	/**
+	 * [PT-BR] Cria a interface textual/console para o usuario com as funcionalidades exigidas pelo exercicio
+	 * tecnico da Dell
+	 * [ENG] Create the textual/console user interface with the functionalities requires by the dell technical exam
+	 * @throws IllegalStateException
+	 * @throws NoSuchFileException Caso nao exista tal arquivo / If the file does not exist
+	 * @throws FileNotFoundException Caso nao encontre tal arquivo / If the file was not found
+	 */
     public void executeApp() throws IllegalStateException, NoSuchFileException, FileNotFoundException{
 
 		int chose2 = 0;
@@ -49,10 +57,7 @@ public class Execute {
 						System.out.println("Por favor, digite o codigo de barras: ");
 						System.out.println("Please, type the barcode: ");
 						long barcode = in.nextLong();
-						if(grabAppFunctions.searchBarcode(barcode).isEmpty()){
-							System.out.println("Nenhum registro encontrado");
-							System.out.println("No record found ");
-						} else System.out.println(grabAppFunctions.searchBarcode(barcode));
+						System.out.println(grabAppFunctions.searchBarcode(barcode));
 						break;
 				} catch (InputMismatchException entradaInvalidaNumero) {
 					System.err.println("Não é permitido inserir letras, informe apenas números inteiros!");

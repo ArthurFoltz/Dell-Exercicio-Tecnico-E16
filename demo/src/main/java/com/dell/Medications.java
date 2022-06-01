@@ -350,7 +350,11 @@ public class Medications implements Comparable<Medications>{
                 + ", tipoProduto=" + tipoProduto + "]";
     }
     
-    
+    /**
+     * [PT-BR] Retorna apenas informacoes basicas do medicamento
+     * [ENG] Return only basic information about the medication
+     * @return {@code String} Informacoes do medicamento / information about the medication
+     */
     public String returnMedicineBasicInfo(){
         String info = "Substancia: " + getSubstancia() + " Produto: " + getProduto() 
                         + " Apresentacao " + getApresentacao() + " PF Sem imposto: " + getPfSemImposto() + "\n";

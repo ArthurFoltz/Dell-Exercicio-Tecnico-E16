@@ -15,6 +15,18 @@ public class ReadCsv {
     
     private ArrayList<Medications> medicationsList = new ArrayList<>();
 
+    /**
+     * [PT-BR] Recebe o caminho para o arquivo csv e realiza a sua leitura, transformando as informacoes
+     * contidas nele em um POJO (Plain Old Java Object), favor utilizar o arquivo csv encaminhado junto
+     * a pasta zipada para melhor funcionamento do programa
+     * [ENG] Receives a path to the csv file performs the reading of it, transforming the info 
+     * contained in it to a POJO (Plain Old Java Object), please use the csv file sent together
+     * for better perfoming of the program
+     * @param path Para o caminho do arquivo csv no computador / The csv path file
+     * @return {@code Boolean} True se leu com sucesso, false se nao / True if read witch sucess, false if not
+     * @throws NoSuchFileException Caso nao exista tal arquivo / If the file does not exist
+     * @throws FileNotFoundException Caso nao encontre tal arquivo / If the file was not found
+     */
     public boolean ProcessCsv(String path) throws NoSuchFileException, FileNotFoundException{
 
         int cont = 0;
@@ -42,6 +54,13 @@ public class ReadCsv {
         
     }
 
+    /**
+     * [PT-BR] Pega cada celula lida no arquivo csv e insere no seu respectivo atributo
+     * [ENG] Take each cell read in the csv file and insert it into its respective attribute 
+     * @param atributos Os atributos da classe Medications / the Medications class attributes
+     * @see Medications Veja tambem / See also
+     * @return - Um objeto do tipo Medicaton / An Medications object
+     */
     private Medications getMedicine(String[] atributos) {
         String substancia = atributos[0];
         String cnpj = atributos[1];
@@ -91,6 +110,11 @@ public class ReadCsv {
         return medicine;
     }
 
+    /**
+     * [PT-BR] Retorna um arraylist criado com objetos da classe Medication apos a leitura do arquivo
+     * [ENG] Return an arraylist created with Medication class objects after the read of the file
+     * @return {@code ArrayList} Lista com os objetos do tipo Medication / List with the Medication objects
+     */
     public ArrayList<Medications> returnMedicationList(){
         return medicationsList;
     }
