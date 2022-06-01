@@ -184,7 +184,6 @@ public class Functionalities {
 	/**
 	 * [PT-BR] Recebe o caminho do arquivo csv para ser lido
 	 * [ENG] Receives the path for the csv file to be read
-	 * @param pathToFile O caminho do arquivo csv / the csv file path
 	 * @return {@code boolean} - True se leu com sucesso, false se nao / True if read witch sucess, false if not
 	 * @throws NoSuchFileException
 	 * @throws FileNotFoundException

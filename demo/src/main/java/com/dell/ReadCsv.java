@@ -18,12 +18,9 @@ public class ReadCsv {
 
     /**
      * [PT-BR] Recebe o caminho para o arquivo csv e realiza a sua leitura, transformando as informacoes
-     * contidas nele em um POJO (Plain Old Java Object), favor utilizar o arquivo csv encaminhado junto
-     * a pasta zipada para melhor funcionamento do programa
+     * contidas nele em um POJO (Plain Old Java Object)
      * [ENG] Receives a path to the csv file performs the reading of it, transforming the info 
-     * contained in it to a POJO (Plain Old Java Object), please use the csv file sent together
-     * for better perfoming of the program
-     * @param path Para o caminho do arquivo csv no computador / The csv path file
+     * contained in it to a POJO (Plain Old Java Object)
      * @return {@code Boolean} True se leu com sucesso, false se nao / True if read witch sucess, false if not
      * @throws NoSuchFileException Caso nao exista tal arquivo / If the file does not exist
      * @throws FileNotFoundException Caso nao encontre tal arquivo / If the file was not found
