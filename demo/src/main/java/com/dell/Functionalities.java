@@ -87,8 +87,9 @@ public class Functionalities {
 
 		Double diference = Double.parseDouble(onlyHigherPmc0) - Double.parseDouble(onlyLowerPmc);
 
+		String r3 = "<<<<<<<<<<<<";
 		String r1 = ("Menor pmc/Lower pmc: " + lowerPmc0Medication + "\nMaior pmc/Higher pmc: " + higherPmc0Medication + "\nDiferenca/Diference: " + diference);
-		String r2 = ("Produtos encontrados/Found products:");
+		String r2 = ("Produtos encontrados/Found products: ") + r3;
 		String retorno = r1 + "\n" + r2 + "\n" + matchBarcode;
 		return retorno;
 	}

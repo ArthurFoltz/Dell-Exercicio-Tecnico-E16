@@ -1,7 +1,6 @@
 package com.dell;
 
-import java.io.FileNotFoundException;
-import java.nio.file.NoSuchFileException;
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -14,10 +13,9 @@ public class Execute {
 	 * tecnico da Dell
 	 * [ENG] Create the textual/console user interface with the functionalities requires by the dell technical exam
 	 * @throws IllegalStateException
-	 * @throws NoSuchFileException Caso nao exista tal arquivo / If the file does not exist
-	 * @throws FileNotFoundException Caso nao encontre tal arquivo / If the file was not found
+	 * @throws IOException
 	 */
-    public void executeApp() throws IllegalStateException, NoSuchFileException, FileNotFoundException{
+    public void executeApp() throws IllegalStateException, IOException{
 
 		int chose2 = 0;
 	try{

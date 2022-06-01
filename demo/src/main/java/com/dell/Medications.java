@@ -334,20 +334,19 @@ public class Medications implements Comparable<Medications>{
         this.tarja = tarja;
     }
     
+
     @Override
     public String toString() {
-        return "Medications [analiseRecursal=" + analiseRecursal + ", apresentacao=" + apresentacao + ", cap=" + cap
-                + ", classeTerapeutica=" + classeTerapeutica + ", cnpj=" + cnpj + ", codigoGgrem=" + codigoGgrem
-                + ", comercializacao2020=" + comercializacao2020 + ", confaz87=" + confaz87 + ", ean1=" + ean1
-                + ", ean2=" + ean2 + ", ean3=" + ean3 + ", icms0=" + icms0 + ", laboratorio=" + laboratorio
-                + ", listaConcessaoCreditoTributario=" + listaConcessaoCreditoTributario + ", pf0=" + pf0 + ", pf12="
-                + pf12 + ", pf17=" + pf17 + ", pf175=" + pf175 + ", pf175Alc=" + pf175Alc + ", pf17Alc=" + pf17Alc
-                + ", pf18=" + pf18 + ", pf18Alc=" + pf18Alc + ", pf20=" + pf20 + ", pfSemImposto=" + pfSemImposto
-                + ", pmc0=" + pmc0 + ", pmc12=" + pmc12 + ", pmc17=" + pmc17 + ", pmc175=" + pmc175 + ", pmc175Alc="
-                + pmc175Alc + ", pmc17Alc=" + pmc17Alc + ", pmc18=" + pmc18 + ", pmc18Alc=" + pmc18Alc + ", pmc20="
-                + pmc20 + ", produto=" + produto + ", regimePreco=" + regimePreco + ", registro=" + registro
-                + ", restricaoHospitalar=" + restricaoHospitalar + ", substancia=" + substancia + ", tarja=" + tarja
-                + ", tipoProduto=" + tipoProduto + "]";
+        return "Medication: substancia: " + substancia + " produto: " + produto + " apresentacao: " + apresentacao +
+        " PF sem impostos: " + pfSemImposto + " cnpj: " + cnpj + " laboratorio: " + laboratorio + " classe terapeutica: " + classeTerapeutica +
+        " Tipo Produto: " + tipoProduto + " Restricao hospitalar: " + restricaoHospitalar + " Tarja: " + tarja +
+        " Registro: " + registro + " Regime preco: " + regimePreco + " Comercializacao 2020: " + comercializacao2020 + "\n" + 
+        " Codigo GGREM: " + codigoGgrem + " Analise Recursal: " + analiseRecursal + " CAP: " + cap + " Laboratorio: " + laboratorio +
+        " Lista Concessao credito tributario: " + listaConcessaoCreditoTributario + " Confaz 87: " + confaz87 +
+        " EAN 1: " + ean1 + " EAN 2: " + ean2 + " EAN3: " + ean3 + " ICMS0: " + icms0 + " PMC 0: " + pmc0 + " PMC 12: " + pmc12 +
+        " PMC 17: " + pmc17 + " PMC 17,5: " + pmc175 + " PMC 17,5 ALC: " + pmc175Alc + " PMC 18: " + pmc18 + " PMC 18 ALC: " + pmc18Alc +
+        " PMC 20: " + pmc20 + " PF 12: " + pf12 + " PF 17: " + pf17 + " PF 17,5: " + pf175 + " PF 17,5 ALC: " + pf175Alc +
+        " PF 17 ALC: " + pf17Alc + " PF 18: " + pf18 + " PF 18 ALC: " + pf18Alc + " PF 20: " + pf20;
     }
     
     /**

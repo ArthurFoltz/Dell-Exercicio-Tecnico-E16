@@ -11,6 +11,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 
+
 public class ReadCsv {
     
     private ArrayList<Medications> medicationsList = new ArrayList<>();
@@ -119,6 +120,6 @@ public class ReadCsv {
         return medicationsList;
     }
 
+}
     
- }
 
