@@ -26,8 +26,7 @@ public class FunctionalitiesTest {
     public void searchMedicationNameRightTest(){
         Medications tempMed = new Medications("BENZOATO DE RIZATRIPTANA","45.987.013/0001-34","ORGANON FARMACÊUTICA LTDA.","525501401110219","1002900140064","7897337702089","   -     ","    -     ","MAXALT","10 MG COM CT BL AL AL X 2","N2C1 - ANTIENXAQUECOSOS TRIPTÂNICOS","Novo","Regulado","18,02","18,02","20,48","21,71","21,71","21,84","21,84","21,98","21,98","22,53","24,91","28,31","30,01","30,01","30,19","30,19","30,39","30,39","31,15","Não","Não","Não","Não","","Positiva","Sim","Tarja Vermelha(*)");
         String geraDescricao = tempMed.returnMedicineBasicInfo();
-
-        String tempStringGot = func.searchMedicationName("BENZOATO DE RIZATRIPTANA").toString();
+        String tempStringGot = func.searchMedicationName("LOSARTA").toString();
         
         assertEquals(geraDescricao, tempStringGot);
     }
